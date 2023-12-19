@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase display 1</title>
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+        
+        .block {
+            background-color: rgb(255, 0, 0);
+            border: 0.2rem solid rgb(0, 0, 255);
+            font-size: 1.6rem;
+            width: 20rem;
+            height: 15rem;
+            margin: 2rem;
+            padding: 1rem;
+        }
+        /*Al inline no se le puede modificar el width y el height. En el margin sólo se aplica horizontal. El padding sí se aplica.*/
+        .inline {
+            background-color: rgb(0, 128, 0);
+            font-size: 1.6rem;
+            width: 20rem;
+            height: 15rem;
+            margin: 2rem;
+            padding: 1rem;
+        }
+
+        .inline-block {
+            font-size: 1.6rem;
+            width: 15rem;
+            height: 5rem;
+            border-radius: 1rem;
+            box-shadow: 0.2rem 0.5rem rgb(33, 4, 61);
+            background-color: blueviolet;
+            color:antiquewhite
+        }
+
+    </style>
+</head>
+<body>
+    <div class="block">El div se ve en bloque</div>
+    <a href="" class="inline">El a se ve en inline</a>
+    <button class="inline-block">Button es inline block</button>
+</body>
+</html>

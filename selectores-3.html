@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        p {
+            font-size: 3rem;
+            color:red;
+            background-color:pink;
+        }
+
+        p::first-letter {
+            color:black;
+        }
+
+        p::before {
+            content: "⚽";
+        }
+
+        p::after {
+            content: "🔥";
+        }
+
+        p:hover {
+            color:blueviolet;
+            background-color: red;
+        }
+        
+        div p:nth-child(2) {
+            color:violet;
+        }
+
+        ::placeholder {
+            color:turquoise;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Esto es un párrafo de prueba</p>
+        <p>Tercer párrafo</p>
+    </div>
+    <input type="text" placeholder="name">
+</body>
+</html>

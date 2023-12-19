@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        input:in-range {
+            background-color: aquamarine;
+        }
+
+        input:out-of-range {
+            background-color: red;
+            border: 0.2rem solid purple;
+        }
+
+        input:in-range + p::after {
+            content: "mayor de edad";
+        }
+
+        input:out-of-range + p::after {
+            content: "menor de edad";
+        }
+    </style>
+</head>
+<body>
+    <label for="age">Introduce tu edad y te digo si eres menor o mayor de edad</label>
+    <input type="number" name="age" id="age" min="18" max="120">
+    <p>Eres </p>
+</body>
+</html>

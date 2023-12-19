@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(250, 250, 250);
+}
+
+main {
+  height: 180px;
+  box-shadow: 0px 8px 5px rgb(150, 150, 150);
+  border-radius: 0 0 6px 6px;
+}
+
+.tabs-container {
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.tab {
+  width: 33.33%;
+  background: none;
+}
+.tab__title {
+  min-width: 60px;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 6px 6px 0 0;
+  background-color: rgb(215, 215, 215);
+  opacity: 0.6;
+}
+/* ===== Un pequeño HOVER ====== */
+.tab__title:hover {
+  background: rgb(240, 240, 240);
+}
+.tab__content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  display: none;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 6px 6px;
+}
+.tab__content--content {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.tab input {
+  display: none;
+  visibility: hidden;
+}
+
+/* ===== Aquí usamos CHECKED ====== */
+
+.tab input:checked ~ .tab__title {
+  background: white;
+  border-bottom: 2px solid rgb(0, 174, 255);
+  color: rgb(0, 75, 110);
+  opacity: 1;
+}
+.tab input:checked ~ .tab__content {
+  display: flex;
+}
+
+/* ================================ */
+.tab__content--content.uno {
+  border: 2px dashed rgb(170, 130, 0);
+  background: rgba(170, 130, 0, 0.15);
+  color: rgb(170, 130, 0);
+}
+.tab__content--content.dos {
+  border: 2px dashed rgb(0, 63, 145);
+  background: rgba(0, 63, 145, 0.15);
+  color: rgb(0, 63, 145);
+}
+.tab__content--content.tres {
+  border: 2px dashed rgb(192, 0, 74);
+  background: rgba(192, 0, 74, 0.15);
+  color: rgb(192, 0, 74);
+}
+    </style>
+</head>
+<body>
+    <main>
+        <ul class="tabs-container">
+          <li class="tab">
+            <input  id="Uno" name="tabs" type="radio" checked>
+            <label class="tab__title" for="Uno">UNO</label>
+            <div class="tab__content">
+              <div class="tab__content--content uno">
+                <p>Contenido Uno</p>
+              </div>
+            </div>
+          </li>
+          <li class="tab">
+            <input  id="Dos" name="tabs" type="radio">
+            <label class="tab__title" for="Dos">DOS</label>
+            <div class="tab__content">
+              <div class="tab__content--content dos">
+                <p>Contenido Dos</p>
+              </div>
+            </div>
+          </li>
+          <li class="tab">
+            <input  id="Tres" name="tabs" type="radio">
+            <label class="tab__title" for="Tres">TRES</label>
+            <div class="tab__content">
+              <div class="tab__content--content tres">
+                <p>Contenido Tres</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+</body>
+</html>
